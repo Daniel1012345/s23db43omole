@@ -1,0 +1,17 @@
+extends layout
+block content
+  h1= title
+
+  - const results = [{instrument_name:'Guitar', brand:'Fender', price: 1000}, {instrument_name: 'Piano', brand: 'Yamaha', price: 5000}, {instrument_name: 'Drums', brand: 'Pearl', price: 1500}]
+  
+  .container-fluid
+    .row
+      each item in results
+        .col-sm-2
+          .musical_instrument
+            p Instrument type: #{item.instrument_name}
+            p Brand: #{item.brand}
+            p Cost: $#{item.price}
+
+
+
